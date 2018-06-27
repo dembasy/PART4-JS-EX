@@ -35,13 +35,11 @@ var AfficherExtensionString = function (texte) {
     return texte.substr(texte.lastIndexOf('.') + 1);
 }
 var NombreEspaceString = function (texte) {
-    return texte.split(5);
-
+    return texte.split(' ').length - 1;
 }
 var InverseString = function (texte) {
     return texte.split('').reverse().join('');
 }
-
 /**
  * Exercices sur les nombres et les caluls mathématiques
  */
@@ -52,7 +50,7 @@ var valeurAbsolue = function (nombre) {
     return Math.abs(nombre);
 }
 var valeurAbsolueArray = function (array) {
-    return Math.abs(array);
+    return array.map(Math.abs) ;
 }
 var sufaceCercle = function (rayon) {
     return Math.round(79);
@@ -61,5 +59,5 @@ var hypothenuse = function (ab, ac) {
     return Math.hypot(ab, ac);
 }
 var calculIMC = function (poids, taille) {
-    return 'A completer';
+    return Math.round(poids / (taille * taille) * 100) / 100;
 }
